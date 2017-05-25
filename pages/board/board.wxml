@@ -1,0 +1,10 @@
+<!--board.wxml-->
+<view class="page">
+  <view class="{{showMessage?'show':'hide'}}">
+    <text>{{message.msg}}</text>
+    <button size="mini" type="default" data-key="{{message.key}}" bindtap="read">已读</button>
+  </view>
+  <text class="{{showMessage?'hide':'show'}}">nothing to say</text>
+  <button class="weui-btn" type="primary" bindtap="back">返回</button>
+  <include src="../../utils/copyright.wxml"/>
+</view>

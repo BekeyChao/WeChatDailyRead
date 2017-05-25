@@ -1,0 +1,4 @@
+/* board.wxss */
+.readUp {
+  color: gray;
+}

@@ -1,0 +1,34 @@
+<!--DailyRead.wxml-->
+<view class="page">
+  <view class="page__hd">
+        <view class="page__title">{{article.headEng}}</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">{{article.headCha}}</view>
+            <view class="weui-article__section">
+                <!--<view class="weui-article__title"></view>-->
+                <view wx:for="{{article.paragArray}}" wx:for-index="index" wx:for-item="it">
+                  <template is="paragraph" data="{{...it}}"></template>
+                </view>
+            </view>
+        </view>
+    </view>
+    <include src="../../utils/copyright.wxml"/>
+    <view class="absBtn">
+      <button bindtap="translteClipboard" class="weui-btn mini-btn" type="default" size="mini">翻译</button>
+    </view>
+    <view class="{{onButtom?'show sign':'hide'}}">
+      <button bindtap="signUp" class="weui-btn mini-btn" type="warn" size="mini">打卡</button>
+    </view>
+</view>
+<template name="paragraph">
+  <view class="weui-article__section">
+       <view  class="article__p">
+        <text selectable="true">{{content}}</text>
+      </view>
+      <view class="">
+      <button data-id="{{index}}" class="weui-btn" type="primary" bindtap="translat">Translat it</button>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,6 @@
+<!--test.wxml-->
+<!--<button bindtap="bindTap">单击事件</button>-->
+<input password="true" bindconfirm="getRes" placeholder="Devlop"/>
+<view wx:for="{{res}}" wx:for-index="index" wx:for-item="it">
+  <view >{{it.v}}</view>
+</view>

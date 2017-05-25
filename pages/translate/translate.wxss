@@ -1,0 +1,9 @@
+/* translate.wxss */
+.word {
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+.section__title {
+  color: gray;
+}

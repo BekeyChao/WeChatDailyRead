@@ -1,0 +1,17 @@
+/* DailyRead.wxss */
+.absBtn {
+  position: fixed;
+  top:810rpx;
+  right: 30px;
+  opacity: 0.7;
+}
+.article__p {
+  text-indent:2em;
+  margin: 0 0 .8em;
+  word-spacing:0.2em;
+}
+.sign {
+  position: fixed;
+  top:910rpx;
+  right: 30px;
+}
