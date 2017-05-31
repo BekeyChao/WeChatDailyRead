@@ -38,9 +38,10 @@ Page({
       that.setData({
         userInfo:userInfo
       })
-      // let logs = wx.getStorageSync('logs')
-      // db.put(userInfo.nickName + 'logs',JSON.stringify(logs))
     })
+    
+  },
+  onReady:function(){
     
   }
 })

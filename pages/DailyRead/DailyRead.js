@@ -7,9 +7,7 @@ Page({
   data: {
     onButtom:0,
     translateWord:"",
-    article:{},
-    send:0,
-    sendKey:""
+    article:{}
   },
 
   /**
@@ -17,8 +15,7 @@ Page({
    * 初始化文章数据
    */
   onLoad: function (options) {
-    // var app = getApp();
-    // app.globalData.article = app.globalData.article + 1;
+    
     var article = require("../../utils/article.js");
     this.setData({
       article: article.getArticle()
@@ -29,7 +26,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
@@ -43,28 +40,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    let nickname = app.globalData.userInfo.nickName
-    if(this.data.send == 0){
-      this.setData({ sendKey: nickname + new Date().getDay() + Math.round(Math.random() * 100)})
-    }
-    this.setData({send:this.data.send + 1})
-    let db = require("../../utils/modDb.js")
-    let infor = { name: nickname, data: new Date(), click: this.data.onButtom }
-    db.put(this.data.sendKey, JSON.stringify(infor))
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    let nickname = app.globalData.userInfo.nickName
-    if (this.data.send == 0) {
-      this.setData({ sendKey: nickname + new Date().getDay() + Math.round(Math.random() * 100) })
-    }
-    this.setData({ send: this.data.send + 1 })
-    let db = require("../../utils/modDb.js")
-    let infor = { name: nickname, data: new Date(), click: this.data.onButtom }
-    db.put(this.data.sendKey, JSON.stringify(infor))
+   
   },
 
   /**
@@ -124,7 +107,7 @@ Page({
   signUp:function(){
     this.setData({ onButtom: this.data.onButtom + 1})
     // alert("今天的打卡密码是:0517")
-    var msgList = ["打卡成功,我建议你不要按第二下!", "(⊙o⊙)…我建议你从上面返回", "你真的那么固执吗?","你再按一次我就对你表白了o(╯□╰)o","我喜欢你"]
+    var msgList = ["打卡成功"]
     var msg = msgList[this.data.onButtom - 2] || msgList[msgList.length - 1];
     wx.showToast({
       title: msg,

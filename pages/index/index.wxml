@@ -8,7 +8,7 @@
     <view class="usermotto ">
       <button bindtap="toDailyRead" class="weui-btn" type="primary" plain="true">DailyRead</button>
       <button bindtap="toTranslator" class="weui-btn" type="primary" plain="true">Translator</button>
-      <button bindtap="toBoard" class="weui-btn" type="primary" plain="true">Board</button>
+      <!--<button bindtap="toBoard" class="weui-btn" type="primary" plain="true">Board</button>-->
     </view>
   </view>
   <include src="../../utils/copyright.wxml"/>

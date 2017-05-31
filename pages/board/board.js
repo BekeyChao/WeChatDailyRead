@@ -89,7 +89,6 @@ Page({
   },
   read: function (e) {
     var key = e.target.dataset.key;
-
     wx.setStorageSync(key, "read");
   }
 })
