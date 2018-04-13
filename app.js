@@ -40,8 +40,8 @@ App({
   globalData:{
     userInfo:null,
     translateRequest:"https://fanyi.youdao.com/openapi.do?keyfrom=DailyRead-Wechat&key=1746786396&type=data&doctype=json&version=1.1&q=",
-    //mobApi提供的key,可以实现多项功能
-    mobKey:"1e0b9c1c91e79",
+    //mobApi提供的key,可以实现多项功能 key可以到api.mob.com中申请
+    mobKey:"",
     //请求端口,基本访问格式为:mobPort/modal/function?key=mobKey&params=
     mobPort:"https://apicloud.mob.com/",
   },
